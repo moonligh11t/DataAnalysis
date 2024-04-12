@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dataanalysisServer.mapper.DataanalysisMapper">
+
+    <resultMap id="BaseResultMap" type="dataanalysisServer.domain.Dataanalysis">
+            <id property="id" column="ID" jdbcType="INTEGER"/>
+            <result property="table" column="Table" jdbcType="VARCHAR"/>
+            <result property="name" column="Name" jdbcType="VARCHAR"/>
+            <result property="time" column="Time" jdbcType="DATE"/>
+            <result property="region" column="Region" jdbcType="VARCHAR"/>
+            <result property="yesterday" column="Yesterday" jdbcType="DECIMAL"/>
+            <result property="today" column="Today" jdbcType="DECIMAL"/>
+            <result property="daycontrast" column="DayContrast" jdbcType="DECIMAL"/>
+            <result property="monthcontrast" column="MonthContrast" jdbcType="DECIMAL"/>
+            <result property="yearcontrast" column="YearContrast" jdbcType="DECIMAL"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        ID,Table,Name,
+        Time,Region,Yesterday,
+        Today,DayContrast,MonthContrast,
+        YearContrast
+    </sql>
+</mapper>
